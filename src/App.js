@@ -552,10 +552,10 @@ function App() {
     // </div>
 
     <div className="flex">
-    <div className="flex flex-col justify-start  w-1/5">
+    <div className="flex flex-col justify-start  w-1/6">
         <Sidebar  />
     </div>
-    <div className="flex flex-col justify-start w-4/5">
+    <div className="flex flex-col justify-start w-5/6">
         <NavBar />
         <Card androids={androids}/>
     </div>
