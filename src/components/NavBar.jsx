@@ -3,7 +3,7 @@ import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const NavBar = () => {
   return (
-    <div className="px-1 py-4 bg-slate-900 border-solid border-2 border-slate-900">
+    <div className="px-1 py-2 ">
       <div className="flex justify-between">
         <div className="order-first text-yellow-400 font-semibold">NavBar</div>
         <div className="order-last">
