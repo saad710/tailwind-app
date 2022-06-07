@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import {FiShoppingBag} from "react-icons/fi"
+import {FiShoppingBag} from "react-icons"
+import {FaBaby} from "react-icons/fa"
+import {MdMobileScreenShare} from "react-icons/md"
+import {FaLaptop} from "react-icons/fa"
+import {GiHairStrands} from "react-icons/gi"
+import {FaChair} from "react-icons/fa"
+import {FiWatch} from "react-icons/fi"
+import {FaTshirt} from "react-icons/fa"
+
+
+
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
@@ -22,7 +32,7 @@ const Sidebar = () => {
       <img
         src={require("../images/control.png")}
         alt="/"
-        className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
+        className={`absolute cursor-pointer -right-3 top-9 w-7 border-slate-900
          border-2 rounded-full  ${!open && "rotate-180"}`}
         onClick={() => setOpen(!open)}
       />
@@ -46,7 +56,7 @@ const Sidebar = () => {
         {Menus.map((Menu, index) => (
           <li
             key={index}
-            className={`flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-gray-300 text-sm items-center gap-x-4 
+            className={`flex  rounded-md p-2 cursor-pointer hover:bg-gray-400 text-slate-900 font-semibold text-sm items-center gap-x-4 
             ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"} `}
           >
             <img src={require(`../images/${Menu.src}.png`)} alt="/" />
