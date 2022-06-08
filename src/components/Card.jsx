@@ -3,10 +3,10 @@ import imagePic from "../images/social-media-header.png";
 const Card = (props) => {
   const { androids } = props;
   return (
-    <div class="p-4 scrollbar-hide overflow-y-auto h-5/6">
+    <div class="p-4 scrollbar-hide overflow-y-auto h-screen">
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {androids?.map((android) => (
-          <div className="flex justify-center p-6 rounded-lg shadow-sm shadow-slate-300 p-2 mt-3">
+          <div className="flex justify-center p-6 rounded-lg shadow-sm shadow-gray-300 p-2 mt-3">
             <div>
               <img src={android.img} alt="/" className="p-2" />
             </div>

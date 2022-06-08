@@ -7,6 +7,9 @@ import {GiHairStrands} from "react-icons/gi"
 import {FaChair} from "react-icons/fa"
 import {FiWatch} from "react-icons/fi"
 import {FaTshirt} from "react-icons/fa"
+import {HiOutlineCamera} from "react-icons/hi"
+import {CgGym} from "react-icons/cg"
+
 
 
 
@@ -14,14 +17,19 @@ import {FaTshirt} from "react-icons/fa"
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Dashboard", src: "Chart_fill" },
-    { title: "Inbox", src: "Chat" },
-    { title: "Accounts", src: "User", gap: true },
-    { title: "Schedule ", src: "Calendar" },
-    { title: "Search", src: "Search" },
-    { title: "Analytics", src: "Chart" },
-    { title: "Files ", src: "Folder", gap: true },
-    { title: "Setting", src: "Setting" },
+    // { title: "Dashboard", src: <FiShoppingBag/> },
+    { title: "Baby Care Products", src: <FaBaby/> },
+    { title: "Mobile Phone", src: <MdMobileScreenShare/> },
+    { title: "Laptop ", src:<FaLaptop/> },
+    { title: "Camera", src:<HiOutlineCamera/> },
+    { title: "Hair Products", src: <GiHairStrands/> },
+    { title: "Furniture", src: <FaChair/> },
+    // { title: "Files ", src: "Folder", gap: true },
+    { title: "Watch", src:<FiWatch/> },
+    { title: "Tshirt", src:<FaTshirt/> },
+    { title: "Gym Products", src:<CgGym/> },
+  
+
   ];
   return (
     <div
@@ -32,7 +40,7 @@ const Sidebar = () => {
       <img
         src={require("../images/control.png")}
         alt="/"
-        className={`absolute cursor-pointer -right-3 top-9 w-7 border-slate-900
+        className={`absolute cursor-pointer -right-3 top-9 w-7 border-gray-300
          border-2 rounded-full  ${!open && "rotate-180"}`}
         onClick={() => setOpen(!open)}
       />
@@ -56,10 +64,11 @@ const Sidebar = () => {
         {Menus.map((Menu, index) => (
           <li
             key={index}
-            className={`flex  rounded-md p-2 cursor-pointer hover:bg-gray-400 text-slate-900 font-semibold text-sm items-center gap-x-4 
+            className={`flex  rounded-md p-2 cursor-pointer hover:bg-gray-300 text-slate-900 font-semibold text-sm items-center gap-x-4 
             ${Menu.gap ? "mt-9" : "mt-2"} ${index === 0 && "bg-light-white"} `}
           >
-            <img src={require(`../images/${Menu.src}.png`)} alt="/" />
+            {/* <img src={require(`../images/${Menu.src}.png`)} alt="/" /> */}
+            {Menu.src}
             <span className={`${!open && "hidden"} origin-left duration-200`}>
               {Menu.title}
             </span>
