@@ -18,7 +18,7 @@ const App = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 6
+      items: 3
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -30,27 +30,17 @@ const App = () => {
     }
   };
 
-
-
   return (
-    // <div className="flex">
-    //   <Sidebar />
-    //   <div className="h-screen flex-1 p-7">
-    //     <NavBar/>
-    //     <Card androids={product} />
-    //     <Footer/>
-    //   </div>
-    // </div>
+    <div className="flex">
+      <Sidebar />
+      <div className="h-screen flex-1 p-7">
+        <NavBar/>
+        <Card androids={product} />
+        <Footer/>
+      </div>
+    </div>
 
-    <Carousel responsive={responsive} >
-  {
-    androids?.map((product,index)=> (
-        <div>
-          <img src={product.img} alt="/" />
-        </div>
-    ))
-  }
-</Carousel>
+
   );
 };
 export default App;
